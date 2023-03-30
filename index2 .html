@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Calculator</title>
+        <link href="https://fonts.googleapis.com/css?family=Rubik+Iso&display=swap" rep="stylesheet">
+    </head>
+<style type="text/css">
+   
+   h1{
+     font-family:'Rubik Iso',cursive;
+     color: purple;
+
+    }
+    body{
+        background-color: black;
+
+    }
+    #cover{
+        border:1px solid yellow;
+        border-radius: 255px;
+        width: 255px;
+        height: 255px;
+        background-color: hotpink;
+
+    }
+    .btn{
+        border: 1px solid purple;
+        border-radius: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: yellowgreen;
+        text-align: center;
+    }
+    #demo{
+        font-family: 'Rubik Iso',cursive;
+        color: purple;
+
+    }
+</style>
+
+<body>
+    <center>
+        <h1><I>My Calculator</I></h1>
+        <form name="calculator" id="cover">
+            <br>
+            <button id="demo">Date</button>
+            <br>
+            <table>
+                <td>
+
+
+                    <tr>
+                        <input type="text" name="ans" id="answer">
+                        
+                    </tr>
+                    <br>
+                    <tr>
+                        <input type="button" value="1" class="btn" onclick="document.calculator.ans.value+='1'">
+                        <input type="button" value="2" class="btn" onclick="document.calculator.ans.value+='2'">
+                        <input type="button" value="3" class="btn" onclick="document.calculator.ans.value+='3'">
+                        <input type="button" value="+" class="btn" onclick="document.calculator.ans.value+='+'">
+                    </tr>
+                    <br>
+                    <tr>
+                        <input type="button" value="4" class="btn" onclick="document.calculator.ans.value+='4'">
+                        <input type="button" value="5" class="btn" onclick="document.calculator.ans.value+='5'">
+                        <input type="button" value="6" class="btn" onclick="document.calculator.ans.value+='6'">
+                        <input type="button" value="-" class="btn" onclick="document.calculator.ans.value+='-'">                
+                    </tr>
+                    <br>
+                    <tr>
+                       
+                        <input type="button" value="7" class="btn" onclick="document.calculator.ans.value+='7'">
+                        <input type="button" value="8" class="btn" onclick="document.calculator.ans.value+='8'">
+                        <input type="button" value="9" class="btn" onclick="document.calculator.ans.value+='9'">
+                        <input type="button" value="*" class="btn" onclick="document.calculator.ans.value+='*'">
+                    </tr>
+                    <br>
+                    <tr>
+                       <input type="button" value="0" class="btn" onclick="document.calculator.ans.value+='0'">
+                       <input type="button" value="=" class="btn" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+                       <input type="reset" value="c" class="btn" onclick="document.calculator.ans.value+='c'">
+                       <input type="button" value="/" class="btn" onclick="document.calculator.ans.value+='/'">
+                    </tr>
+
+                    </td>
+                </table>
+            </form>
+            <script type="text/javascript">
+                var d = new Date();
+                var n = d.toidcaleDatestring();
+                    document.getElementById("demo").innerHTML = n;
+        </script>
+        </center> 
+ </body>
+ </html>
+
+
+            
+                    
